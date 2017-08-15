@@ -1,0 +1,25 @@
+package myNetworkedGame;
+
+import gameNet.GameCreator;
+import gameNet.GameNet_CoreGame;
+import gameNet.GameNet_UserInterface;
+
+public class MyMain extends GameCreator {
+
+	// *******************************************************
+	// Class Constructor
+	// *******************************************************
+	public GameNet_CoreGame createGame() {
+		return new MyGame();
+	}
+
+	// *******************************************************
+	// Game Main
+	// *******************************************************
+	public static void main(String[] args) {
+		MyMain myMain = new MyMain();
+		GameNet_UserInterface myUserInterface = new MyUserInterface();
+
+		myMain.enterGame(myUserInterface);
+	}
+}
